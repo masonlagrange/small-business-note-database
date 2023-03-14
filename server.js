@@ -30,7 +30,7 @@ app.get('/api/notes', (req, res) =>
 
 // POST Route for new note
 app.post('/api/notes', (req, res) => {
-    const { title, text, id } = req.body;
+    const { title, text, i } = req.body;
 
   // If all the required properties are present
   if (title && text) {
@@ -62,3 +62,5 @@ app.post('/api/notes', (req, res) => {
     res.status(500).json('Error in posting review');
   }
 })
+
+app.listen(process.env.PORT);
